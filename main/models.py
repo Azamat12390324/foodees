@@ -16,9 +16,9 @@ class Home(models.Model):
     
 
 class About(models.Model):
-    left_image = models.ImageField(upload_to='media/about/left_image/%Y%m/%d', blank=True)
+    left_image = models.ImageField(upload_to='media/about/left_image/%Y/%m/%d', blank=True)
     about_title = models.CharField(max_length=255, blank=True)
-    descriptions = models.TextField(blank=True)
+    #descriptions = models.TextField(blank=True)
     article = models.CharField(max_length=255, blank=True)
     article_author = models.CharField(max_length=255, blank=True)
     
@@ -39,7 +39,7 @@ class Feature(models.Model):
     
     
     def __str__(self) -> str:
-        return self.about
+        return self.title
     
     
     class Meta:

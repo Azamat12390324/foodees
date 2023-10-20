@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html'%}
+{% load static %}
+
+{% block content %}
+<div id="fh5co-container">
+    <div id="fh5co-home" class="js-fullheight" data-section="home">
+
+        <div class="flexslider">
+            
+            <div class="fh5co-overlay"></div>
+            <div class="fh5co-text">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="to-animate">foodee</h1>
+                        <h2 class="to-animate">Lovely Designed <span>by</span></h2>
+                    </div>
+                </div>
+            </div>
+              <ul class="slides">
+               <li style="background-image: url('{% static 'images/slide_1.jpg' %}')"; data-stellar-background-ratio="0.3"></li>
+               <li style="background-image: url('{% static 'images/slide_2.jpg' %}')"; data-stellar-background-ratio="0.3"></li>
+               <li style="background-image: url('{% static 'images/slide_3.jpg' %}')"; data-stellar-background-ratio="0.3"></li>
+              </ul>
+
+        </div>
+        
+    </div>
+{% endblock %}        
