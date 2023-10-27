@@ -29,9 +29,8 @@ class About(models.Model):
     class Meta:
         verbose_name = 'About'
         verbose_name_plural = 'Abouts'
-    
-    
-    
+        
+        
 class Feature(models.Model):
     icons = models.ImageField(upload_to='media/Feature/icons/%Y%m/%d', blank=True) 
     title = models.CharField(max_length=25, blank=True)
@@ -80,4 +79,21 @@ class Menu(models.Model):
         verbose_name_plural = 'Menues'
      
     
-               
+class Events(models.Model):
+    icons = models.ImageField(upload_to='Events/icons/%Y/%m/%d', blank=True)
+    title = models.CharField(max_length=255, blank=True)
+    description = models.TextField(blank=True)
+    title_card = models.CharField(max_length=(255), blank=True)
+    book_card = models.DateTimeField(auto_now_add=True)
+    description_card = models.TextField(blank=True)
+    
+    def __str__(self) -> str:
+        return self.title_card
+    
+    class Meta:
+        verbose_name = "Event"
+        verbose_name_plural = "Events"
+    
+    
+    
+                   

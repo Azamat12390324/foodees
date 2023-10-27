@@ -1,4 +1,4 @@
-{% extends 'layouts/base.html'%}
+{% extends "layouts/base.html" %}
 {% load static %}
 
 {% block content %}
@@ -17,12 +17,10 @@
                 </div>
             </div>
               <ul class="slides">
-               <li style="background-image: url('{% static 'images/slide_1.jpg' %}')"; data-stellar-background-ratio="0.3"></li>
-               <li style="background-image: url('{% static 'images/slide_2.jpg' %}')"; data-stellar-background-ratio="0.3"></li>
-               <li style="background-image: url('{% static 'images/slide_3.jpg' %}')"; data-stellar-background-ratio="0.3"></li>
+               <li style="background-image: url('{% static 'images/slide_1.jpg' %}')"; data-stellar-background-ratio="0.4"></li>
+               <li style="background-image: url('{% static 'images/slide_2.jpg' %}')"; data-stellar-background-ratio="0.4"></li>
+               <li style="background-image: url('{% static 'images/slide_3.jpg' %}')"; data-stellar-background-ratio="0.4"></li>
               </ul>
-
-        </div>
-        
+            </div>
     </div>
 {% endblock %}        
